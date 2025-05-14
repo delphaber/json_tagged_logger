@@ -21,5 +21,9 @@ module JsonTaggedLogger
       end
     end
 
+    def flush
+      clear_tags!
+      super if defined?(super)
+    end
   end
 end
